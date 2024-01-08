@@ -6,12 +6,12 @@ project "Core"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp", "Vendors/**.c", "Vendors/glm/**.hpp" }
+   files { "Source/**.h", "Source/**.cpp", "Vendor/**.c", "Vendor/glm/**.hpp" }
 
    includedirs
    {
-      "Vendors",
-      "Vendors/glm",
+      "Vendor",
+      "Vendor/glm",
       "../Vendor/Libraries/GLFW/Include",
       "../Vendor/Libraries/glad/Include",
       "Source"
@@ -29,6 +29,9 @@ project "Core"
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
+   
+   -- prevents linking to MSVCRT
+   linkoptions { "/NODEFAULTLIB:MSVCRT" }
 
    filter "system:windows"
        systemversion "latest"

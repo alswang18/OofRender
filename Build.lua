@@ -19,4 +19,8 @@ group "Core"
 	include "Core/Build-Core.lua"
 group ""
 
+group "UnitTests"
+   include "UnitTests/Build-Test.lua"
+group ""
+
 include "App/Build-App.lua"

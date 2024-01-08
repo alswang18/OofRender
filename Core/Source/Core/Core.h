@@ -2,7 +2,5 @@
 
 namespace Core
 {
-
 	int Render();
-
 }

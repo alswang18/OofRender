@@ -13,8 +13,6 @@ project "App"
       "Source",
 	  -- Include Core
 	  "../Core/Source",
-    --   "../Vendor/Libraries/GLFW/Include",
-    --   "../Vendor/Libraries/glad/Include",
    }
 
    links
