@@ -1,3 +1,8 @@
+-- check if vscode 
+if _ACTION == "vscode" then
+   print("Running VSCode action")
+   require("Scripts/premake-vscode")
+end
 -- premake5.lua
 workspace "OofRender"
    architecture "x64"

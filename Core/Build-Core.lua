@@ -1,4 +1,5 @@
 project "Core"
+   print("Building Core")
    kind "StaticLib"
    language "C++"
    cppdialect "C++17"
@@ -49,3 +50,5 @@ project "Core"
        runtime "Release"
        optimize "On"
        symbols "Off"
+
+    print("Finished Building Core")
