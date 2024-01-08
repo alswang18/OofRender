@@ -1,16 +1,29 @@
 project "Core"
    kind "StaticLib"
    language "C++"
-   cppdialect "C++20"
+   cppdialect "C++17"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp" }
+   files { "Source/**.h", "Source/**.cpp", "Vendors/**.c" }
 
    includedirs
    {
+      "Vendors",
+      "../Vendor/Libraries/GLFW/Include",
+      "../Vendor/Libraries/glad/Include",
       "Source"
    }
+
+    libdirs
+    {
+        "../Vendor/Libraries/GLFW/Lib"
+    }
+    
+    links
+    {
+        "glfw3.lib",
+    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")

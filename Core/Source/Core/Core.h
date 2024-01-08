@@ -1,6 +1,9 @@
 #pragma once
 
-namespace Core {
+
+
+namespace Core
+{
 
 	void PrintHelloWorld();
 

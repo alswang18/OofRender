@@ -1,7 +1,7 @@
 project "App"
    kind "ConsoleApp"
    language "C++"
-   cppdialect "C++20"
+   cppdialect "C++17"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
@@ -9,15 +9,17 @@ project "App"
 
    includedirs
    {
+      "Vendors",
       "Source",
-
 	  -- Include Core
-	  "../Core/Source"
+	  "../Core/Source",
+    --   "../Vendor/Libraries/GLFW/Include",
+    --   "../Vendor/Libraries/glad/Include",
    }
 
    links
    {
-      "Core"
+      "Core",
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
