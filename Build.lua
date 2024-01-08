@@ -1,7 +1,7 @@
--- check if vscode 
+-- check if vscode
 if _ACTION == "vscode" then
    print("Running VSCode action")
-   require("Scripts/premake-vscode")
+   require("Scripts/premake-plugins/premake-vscode")
 end
 -- premake5.lua
 workspace "OofRender"
