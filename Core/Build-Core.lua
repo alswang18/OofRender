@@ -5,11 +5,12 @@ project "Core"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp", "Vendors/**.c" }
+   files { "Source/**.h", "Source/**.cpp", "Vendors/**.c", "Vendors/glm/**.hpp" }
 
    includedirs
    {
       "Vendors",
+      "Vendors/glm",
       "../Vendor/Libraries/GLFW/Include",
       "../Vendor/Libraries/glad/Include",
       "Source"
