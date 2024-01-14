@@ -4,7 +4,7 @@ import sys
 
 
 def find_file_root(filename, folder_path):
-    for root, dirs, files in os.walk(folder_path):
+    for root, _, files in os.walk(folder_path):
         if filename in files:
             # If the target file is found, print its full path
             bat_file_path = root
